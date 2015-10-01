@@ -4,8 +4,6 @@ cgitb.enable()
 
 import cgi
 
-print("Content-type: text/html\n\n")
-
 form = cgi.FieldStorage()
 argtn = form.getvalue('tablens')
 argcu = form.getvalue('dColumns')
