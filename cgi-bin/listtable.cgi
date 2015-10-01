@@ -1,12 +1,11 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python
 import cgitb
 cgitb.enable()
 
 import cgi
 
-form = cgi.FieldStorage()
-argtn = form.getvalue('tablens')
-argcu = form.getvalue('dColumns')
+print("Content-type: text/html\n\n")
+print 
 
 import sys
 sys.path.append('/usr/lib/python2.7/site-packages/')
@@ -19,13 +18,10 @@ from thrift.protocol import TBinaryProtocol
 from hbase import Hbase
 from hbase.ttypes import *
 
-transport = TSocket.TSocket('192.168.171.168', 9090);
+transport = TSocket.TSocket('192.168.171.154', 9090);
 transport = TTransport.TBufferedTransport(transport)
 protocol = TBinaryProtocol.TBinaryProtocol(transport);
 client = Hbase.Client(protocol)
 transport.open()
 
-content = ColumnDescriptor(name=str(argcu), maxVersions=1)
-
-client.createTable(str(argtn), [content])
-print 
+print(client.getTableNames())
