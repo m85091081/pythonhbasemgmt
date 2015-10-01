@@ -61,9 +61,9 @@ $(document).ready(function() {
 //twitter bootstrap script
  $("button#submit").click(function(){
     $.ajax({
-    		   type: "GET",
- url: "cgi-bin/create.cgi",
- data: $('form.createtable').serialize(),
+    		   type: "POST",
+			   url: "/cgi-bin/create.cgi",
+			   data: $('form.createtable').serialize(),
          success: function(msg){
            		  $("#thanks").html(msg)
          },
