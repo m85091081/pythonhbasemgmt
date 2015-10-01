@@ -21,13 +21,15 @@
 					  	<div class="panel-heading">Easy Hbase Management System</div>
 						<div class="panel-body">
 							<form class="createtable">
-							<input name="dColumns" type="text" class="form-control" required pattern="{1,256}" maxlength='256' placeholder="請輸入首列的名稱">
-							</br> 
-							<div class="input-group input-group-lg">
+								<input name="dColumns" type="text" class="form-control" required pattern="{1,256}" maxlength='256' placeholder="請輸入首列的名稱">
+								</br> 
+    <div class="input-group input-group-lg">
 								<input name="tablens" type="text" class="form-control" required pattern="{1,256}" maxlength='256' placeholder="請輸入您要的表單名稱">
-							</div>
-						</form>
-									<button  class="btn btn-default" id="submit">submit</button>
+      <span class="input-group-btn">
+		<button  class="btn btn-default" id="submit">submit</button>
+      </span>
+</div>
+							</form>
 						</br>
 						<table class="table table-hover">
 						   	<tr>
