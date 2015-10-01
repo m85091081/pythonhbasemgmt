@@ -5,7 +5,6 @@ cgitb.enable()
 import cgi
 
 print("Content-type: text/html\n\n")
-print 
 
 form = cgi.FieldStorage()
 argtn = form.getvalue('tablens')
@@ -32,7 +31,7 @@ content = ColumnDescriptor(name=str(argcu), maxVersions=1)
 
 try:
     client.createTable(str(argtn), [content])
-    print('status: 303 See other')
-    print('Location: google.com.tw')
+    print("Location: google.com.tw")
+    print 
 except:
     print('error')
