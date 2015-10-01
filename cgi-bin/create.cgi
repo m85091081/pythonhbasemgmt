@@ -29,7 +29,7 @@ content = ColumnDescriptor(name=str(argcu), maxVersions=1)
 
 try:
     client.createTable(str(argtn), [content])
-    print("Location:http://google.com.tw")
+    print("Location: http://google.com.tw\r\n\r")
     print 
 except:
     print('error')
