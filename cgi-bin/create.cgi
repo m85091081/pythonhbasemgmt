@@ -35,4 +35,4 @@ try:
     print('status: 303 See other')
     print('Location: google.com.tw')
 except:
-    print('去你的不要亂打')
+    print('error')
