@@ -50,24 +50,17 @@
 	</div>
 </body>
 <script>
-$(document).ready(function() {
-    $('#createtable').formValidation();
-});
-</script>
-<script>
  $(function() {
 //twitter bootstrap script
  $("button#submit").click(function(){
     $.ajax({
-    		   type: "POST",
+    		   type: "GET",
 			   url: "/cgi-bin/create.cgi",
 			   data: $('form.createtable').serialize(),
-         },
- error: function(){
- alert("failure");
- }
-       });
+			   success: function(msg){ alert("ok") ;},
+			   error: function(){ alert("failure"); }
+	});
  });
-});
+ });
 </script>
 </html>
