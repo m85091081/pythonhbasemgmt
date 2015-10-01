@@ -32,6 +32,7 @@ content = ColumnDescriptor(name=str(argcu), maxVersions=1)
 
 try:
     client.createTable(str(argtn), [content])
-    print('ok')
+    print('status: 303 See other')
+    print('Location: google.com.tw')
 except:
     print('去你的不要亂打')
