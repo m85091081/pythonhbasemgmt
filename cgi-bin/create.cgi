@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2.7
 import cgitb
 cgitb.enable()
 
@@ -10,9 +10,6 @@ print
 form = cgi.FieldStorage()
 argtn = form.getvalue('tablens')
 argcu = form.getvalue('dColumns')
-
-print(str(argtn))
-print(str(argcu))
 
 import sys
 sys.path.append('/usr/lib/python2.7/site-packages/')
@@ -33,5 +30,8 @@ transport.open()
 
 content = ColumnDescriptor(name=str(argcu), maxVersions=1)
 
-client.createTable(str(argtn), [content])
-print(client.getTableNames())
+try:
+    client.createTable(str(argtn), [content])
+    print('ok')
+except:
+    print('去你的不要亂打')
