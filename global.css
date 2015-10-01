@@ -1,0 +1,5 @@
+#wtcenter {
+	    position:absolute; height:600px; top:50%; margin-top:-300px; width:100%; /* div高度的一半 */
+	}
+
+.well {min-height:600px;}
