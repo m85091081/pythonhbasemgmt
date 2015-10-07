@@ -36,6 +36,7 @@ result2 = client.scannerGet(id)
 sum_r=0
 while result2:
     sum_r +=  1
+    result2 = client.scannerGet(id)
 
 print("Content-Type: text/html\n\n")
 print
