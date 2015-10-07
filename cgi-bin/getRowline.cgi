@@ -38,5 +38,5 @@ while result2:
     sum_r +=  1
 
 print("Content-Type: text/html\n\n")
-print()
+print
 print(sum_r)
