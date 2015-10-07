@@ -23,7 +23,7 @@
 								<div class="col-lg-11">
 								<div class="row">
 									<form class="createtable">
-										<input name="dColumns" type="text" class="form-control" required pattern="{1,256}" maxlength='256' placeholder="請輸入首列的名稱">
+										<input name="dColumns" type="text" class="form-control" required pattern="{1,256}" maxlength='256' placeholder="請輸入首行的名稱">
 										</br> 
 										<input name="tablens" type="text" class="form-control" required pattern="{1,256}" maxlength='256' placeholder="請輸入您要的表單名稱">
 									</form>
@@ -37,7 +37,7 @@
 							<tr>
 								<th>Number of Table</th>
 								<th>Table Name</th>
-								<th>Columns</th>
+								<th>Rows</th>
 						  	</tr>
 						</table>
 					</div>
@@ -78,7 +78,7 @@
 		 		type: "GET",
 		 		url: "/cgi-bin/create.cgi",
 		 		data: $('form.createtable').serialize(),
-		 		success: function(msg){ alert("ok") ;},
+		 		success: function(){ window.location.reload(true); },
 				error: function(){ alert("failure");} 
 			});
 		});
