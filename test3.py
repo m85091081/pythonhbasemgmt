@@ -23,11 +23,11 @@ tableName = 'result'
 rowKey = 's96113106'
 
 result = client.getRow(tableName, rowKey, None)
-print result
+print(result)
 for r in result:
-    print 'ID:' , r.row ,'Student name is ' , r.columns.get('name:').value
-    print 'His Chinese Score is ' , r.columns.get('scores:Chinese').value
-    print 'His English Score is ' , r.columns.get('scores:english').value
-    print 'His Math Score is ' , r.columns.get('scores:math').value
+    print('ID:' , r.row ,'Student name is ' , r.columns.get('name:').value)
+    print('His Chinese Score is ' , r.columns.get('scores:Chinese').value)
+    print('His English Score is ' , r.columns.get('scores:english').value)
+    print('His Math Score is ' , r.columns.get('scores:math').value)
 
 

@@ -23,5 +23,5 @@ tableName = 'test'
 id = client.scannerOpenWithScan(tableName, scan, None)
 result = client.scannerGet(id)
 while result:
-    print result
+    print(result)
     result = client.scannerGet(id)
