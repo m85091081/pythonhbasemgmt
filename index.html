@@ -58,11 +58,13 @@
 				$.ajax({
 					type: "GET",
 					url: "/cgi-bin/getRowline.cgi",
-					data: "tablen=" + value 
-				});
-				var myRow = "<tr><td>"+ number + "</td><td>" + value + "</td><td>" + value + "</td></tr>" ;
-				number = number + 1;
-				$("#HbaseTable tr:last").after(myRow);
+					data: "tablen=" + value,
+					complete: function(r){
+						var myRow = "<tr><td>"+ number + "</td><td>" + value + "</td><td>" + r.responseText + "</td></tr>" ;
+						number = number + 1; 
+						$("#HbaseTable tr:last").after(myRow); 	
+					}
+					});
 			});
 		}).fail( function( data ) {
 		});

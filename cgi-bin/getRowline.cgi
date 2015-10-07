@@ -37,5 +37,6 @@ sum_r=0
 while result2:
     sum_r +=  1
 
-
+print("Content-Type: text/html\n\n")
+print()
 print(sum_r)
