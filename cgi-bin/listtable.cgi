@@ -24,5 +24,5 @@ client = Hbase.Client(protocol)
 transport.open()
 
 import json
-listTN = (client.getTableNames)
+listTN = client.getTableNames()
 print(json.dumps(listTN,separators=( ',' , ':')))
