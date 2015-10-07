@@ -55,6 +55,11 @@
 			console.log(data);
 			$.each(data, function (index, value) {
 				console.log(value);
+				$.ajax({
+					type: "GET",
+					url: "/cgi-bin/getRowline.cgi",
+					data: value 
+				});
 				var myRow = "<tr><td>"+ number + "</td><td>" + value + "</td><td>" + value + "</td></tr>" ;
 				number = number + 1;
 				$("#HbaseTable tr:last").after(myRow);
