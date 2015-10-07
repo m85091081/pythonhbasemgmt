@@ -1,4 +1,11 @@
+#!/usr/bin/python2.7
+import cgitb
+cgitb.enable()
+
 import cgi
+
+form = cgi.FieldStorage()
+argtn = form.getvalue('tablen')
 
 
 import sys
@@ -22,7 +29,7 @@ client = Hbase.Client(protocol)
 transport.open()
 
 scan = TScan()
-tableName = 'result'
+tableName = str(argtn)
 id = client.scannerOpenWithScan(tableName, scan, None)
 
 result2 = client.scannerGet(id)
